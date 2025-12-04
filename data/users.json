@@ -1,0 +1,158 @@
+[
+    {
+        "name": "ricardo",
+        "stocks": [
+            {
+                "amount": 50.0,
+                "index": "FDR.MC",
+                "currency": "EUR"
+            },
+            {
+                "amount": 82.0,
+                "index": "ACX.MC",
+                "currency": "EUR"
+            },
+            {
+                "amount": 55.0,
+                "index": "NTGY.MC",
+                "currency": "EUR"
+            },
+            {
+                "amount": 44.0,
+                "index": "FCC.MC",
+                "currency": "EUR"
+            }
+        ],
+        "history": [
+            {
+                "day": "07/11/2025",
+                "totalValue": 4040.6800000000003
+            },
+            {
+                "day": "09/11/2025",
+                "totalValue": 4057.7
+            },
+            {
+                "day": "11/11/2025",
+                "totalValue": 4070.04
+            },
+            {
+                "day": "12/11/2025",
+                "totalValue": 4059.2999999999997
+            },
+            {
+                "day": "13/11/2025",
+                "totalValue": 4089.32
+            },
+            {
+                "day": "14/11/2025",
+                "totalValue": 4078.4
+            },
+            {
+                "day": "16/11/2025",
+                "totalValue": 4088.14
+            },
+            {
+                "day": "18/11/2025",
+                "totalValue": 4068.5
+            },
+            {
+                "day": "19/11/2025",
+                "totalValue": 4016.1400000000003
+            },
+            {
+                "day": "20/11/2025",
+                "totalValue": 4037.8599999999997
+            },
+            {
+                "day": "21/11/2025",
+                "totalValue": 4084.14
+            },
+            {
+                "day": "24/11/2025",
+                "totalValue": 4040.96
+            },
+            {
+                "day": "25/11/2025",
+                "totalValue": 4087.96
+            },
+            {
+                "day": "26/11/2025",
+                "totalValue": 4125.56
+            },
+            {
+                "day": "27/11/2025",
+                "totalValue": 4173.66
+            },
+            {
+                "day": "28/11/2025",
+                "totalValue": 4170.0599999999995
+            },
+            {
+                "day": "29/11/2025",
+                "totalValue": 4160.18
+            },
+            {
+                "day": "30/11/2025",
+                "totalValue": 4160.18
+            },
+            {
+                "day": "01/12/2025",
+                "totalValue": 4160.18
+            },
+            {
+                "day": "02/12/2025",
+                "totalValue": 4141.38
+            },
+            {
+                "day": "03/12/2025",
+                "totalValue": 4161.54
+            },
+            {
+                "day": "04/12/2025",
+                "totalValue": 4150.8
+            }
+        ]
+    },
+    {
+        "name": "xxx",
+        "stocks": [
+            {
+                "amount": 21.0,
+                "index": "APPL",
+                "currency": "EUR"
+            },
+            {
+                "amount": 25.0,
+                "index": "GOOGLE",
+                "currency": "EUR"
+            },
+            {
+                "amount": 25.0,
+                "index": "AAA",
+                "currency": "EUR"
+            }
+        ],
+        "history": [
+            {
+                "day": "07/11/2025",
+                "totalValue": 107.316
+            },
+            {
+                "day": "08/11/2025",
+                "totalValue": 106.188
+            }
+        ]
+    },
+    {
+        "name": "montse",
+        "stocks": [
+            {
+                "amount": 23.0,
+                "index": "APPL",
+                "currency": "EUR"
+            }
+        ],
+        "history": null
+    }
+]
