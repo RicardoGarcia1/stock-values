@@ -1,19 +1,24 @@
-FROM python:3.11-slim
+# =============================================================
+# BUILDER para crear dependencias compatibles con Lambda
+# =============================================================
+FROM --platform=linux/arm64 amazonlinux:2023 AS builder
 
-# Set workdir
-WORKDIR /app
+# Actualiza sistema e instala herramientas necesarias
+RUN dnf update -y && \
+    dnf install -y python3.12 python3.12-pip python3.12-devel gcc zip && \
+    dnf clean all
 
-# Instalar dependencias
+# Crea el directorio de trabajo
+WORKDIR /var/task
+
+# Copia requirements
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copiar el código
-COPY . .
+# Instala dependencias exactamente como Lambda las necesita
+RUN pip3.12 install --no-cache-dir -r requirements.txt -t .
 
-# Exponer el puerto
-EXPOSE 8000
-
-# Comando por defecto
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
-
-
+# Copia tu aplicación FastAPI
+COPY app ./app
+COPY data ./data
+# Empaqueta todo en un ZIP
+RUN zip -r lambda.zip .

@@ -42,3 +42,13 @@ Create ALB
 
 
 - Create Target Group
+
+# Git commit - eliminar archivos sin seguimiento 
+
+git clean -fdx
+
+# Update Lambda code
+docker build -t lambda-fastapi .
+docker create --name extract lambda-fastapi
+docker cp extract:/var/task/lambda.zip ./lambda.zip
+docker rm extract
