@@ -22,3 +22,5 @@ COPY app ./app
 COPY data ./data
 # Empaqueta todo en un ZIP
 RUN zip -r lambda.zip .
+
+

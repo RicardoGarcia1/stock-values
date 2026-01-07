@@ -61,3 +61,9 @@ add-init:
 		-not -path "*/__pycache__*" \
 		-exec sh -c 'if [ ! -f "$$0/__init__.py" ]; then echo "→ $$0/__init__.py"; touch "$$0/__init__.py"; fi' {} \;
 	@echo "✅ Archivos __init__.py creados correctamente."
+
+create-zip:
+	docker build -t lambda-fastapi .
+	docker create --name extract lambda-fastapi
+	docker cp extract:/var/task/lambda.zip ./lambda.zip
+	docker rm extract
