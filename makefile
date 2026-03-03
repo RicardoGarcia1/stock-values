@@ -27,7 +27,7 @@ test: .install-deps
 
 # Correr FastAPI app
 run: .install-deps
-	$(UVICORN) $(APP) --reload --host 127.0.0.1 --port 8000
+	$(UVICORN) $(APP) --reload --host '127'.0.0.1 --port 8000
 
 # Activar entorno manualmente
 activate:

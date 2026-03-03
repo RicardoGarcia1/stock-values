@@ -64,6 +64,17 @@ docker rm extract
 sam build --use-container
 sam local start-api
 
+## E2C
+
+### Connect to the instance via SSH
+ssh -i "key-server.pem" ubuntu@ec2-35-178-41-121.eu-west-2.compute.amazonaws.com
+git clone ...
+sudo apt install nodejs
+sudo apt install npm
+sudo npm install pm2@latest -g
+
+
+http://35.178.41.121:8000/healtz
 
 ### Localstack 
 
@@ -83,4 +94,7 @@ aws dynamodb scan \
     --endpoint-url http://localhost:4566 \
     --region ap-south-1
 '''
+
+
+### 
 
