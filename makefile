@@ -21,7 +21,6 @@ venv: $(VENV_DIR)
 
 # Instalar dependencias manualmente
 deps: .install-deps
-
 # Ejecutar tests (auto-hace venv y deps)
 test: .install-deps
 	$(PYTHON) -m pytest

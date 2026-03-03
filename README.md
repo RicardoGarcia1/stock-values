@@ -67,3 +67,20 @@ sam local start-api
 
 ### Localstack 
 
+#### DYNAMO DB 
+- Crear tabla USERS
+
+
+- Listar tablas
+aws dynamodb list-tables \
+    --endpoint-url http://localhost:4566 \
+    --region ap-south-1
+
+- Todos los elementos de la tabla:
+'''
+aws dynamodb scan \
+    --table-name users \
+    --endpoint-url http://localhost:4566 \
+    --region ap-south-1
+'''
+

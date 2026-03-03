@@ -1,0 +1,31 @@
+{
+  "pagination": {
+    "limit": 100,
+    "offset": 0,
+    "count": 100,
+    "total": 250
+  },
+  "data": [
+    {
+      "open": 202.59,
+      "high": 203.44,
+      "low": 200.2,
+      "close": 200.3,
+      "volume": 53899923,
+      "adj_high": 203.44,
+      "adj_low": 200.2,
+      "adj_close": 200.3,
+      "adj_open": 202.59,
+      "adj_volume": 54064033,
+      "split_factor": 1,
+      "dividend": 0,
+      "name": "Apple Inc",
+      "exchange_code": "NASDAQ",
+      "asset_type": "Stock",
+      "price_currency": "USD",
+      "symbol": "AAPL",
+      "exchange": "XNAS",
+      "date": "2025-06-24T00:00:00+0000"
+    }
+  ]
+}

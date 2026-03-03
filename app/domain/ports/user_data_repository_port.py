@@ -1,12 +1,11 @@
-# domain/ports/stock_repository_port.py
 from typing import List
 from abc import ABC, abstractmethod
 
-from app.domain.models.user_data import Stock, UserPortfolio
+from app.domain.models.user_data import Stock, User
 
 class UserDataRepositoryPort(ABC):
     @abstractmethod
-    def add_user(self, new_user: UserPortfolio):
+    def add_user(self, new_user: User):
         pass
 
     @abstractmethod
@@ -14,7 +13,7 @@ class UserDataRepositoryPort(ABC):
         pass
 
     @abstractmethod
-    def patch_user(self, user_to_update: UserPortfolio):
+    def patch_user(self, user_to_update: User):
         pass
     
     @abstractmethod
@@ -22,5 +21,10 @@ class UserDataRepositoryPort(ABC):
         pass
 
     @abstractmethod
-    def add_or_update_history_record(self, total:float, user_id: str):
+    def add_or_update_history_record(self, total:str, user_id: str):
         pass
+
+    @abstractmethod
+    def get_user_email_and_history(self, user_id:str):
+        pass
+    

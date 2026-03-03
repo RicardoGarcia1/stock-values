@@ -99,7 +99,6 @@ class MarketStackApi(StockApiPort):
         
 
     async def get_price_eof(self, index: str) -> float:
-        """Devuelve el último precio de cierre válido."""
         stock_response = await self._fetch_price_data(index)
         stock_response_data = stock_response.data
         filtered = [x for x in stock_response_data if x.open != 0]

@@ -2,7 +2,8 @@ from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 from app.domain.services.user_service import UserService
 from app.infrastucture.client.market_stack_api.market_stack_api import MarketStackApi
-from app.infrastucture.repository.json_user_data_repository import JSONUserDataRepository
+from app.infrastucture.notifier.ses_email_sender import SesEmailSender
+from app.infrastucture.repository.dynamo_db_user_data_repository import DynamoDbUserDataRepository
 from app.settings import Settings
 
 
@@ -10,9 +11,10 @@ settings = Settings()
 
 stock_router = APIRouter()
 
-user_repo = JSONUserDataRepository()
+user_repo = DynamoDbUserDataRepository()
 stock_api = MarketStackApi()
-user_service = UserService(user_repo, stock_api)
+user_notifier = SesEmailSender()
+user_service = UserService(user_repo, stock_api,user_notifier)
 
    
 @stock_router.get(

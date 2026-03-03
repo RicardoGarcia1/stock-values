@@ -8,6 +8,7 @@ class Pagination(BaseModel):
     count: int
     total: int 
 
+
 class Data(BaseModel):
     open: float
     high: float
@@ -25,6 +26,8 @@ class Data(BaseModel):
     exchange: str | None = None
     date: datetime
 
+
 class StockDetails(BaseModel):
     pagination:  Pagination
     data: List[Data]
+    
