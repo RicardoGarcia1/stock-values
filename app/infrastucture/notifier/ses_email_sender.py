@@ -45,8 +45,10 @@ class SesEmailSender(EmailSenderPort):
 
             signed = "incrementado" if current_value - last_week_value > 0 else "disminuido"
             amount_updated = current_value - last_week_value
-            percent = ((current_value - last_week_value) / last_week_value) *100
-
+            if last_week_value != 0:
+                percent = ((current_value - last_week_value) / last_week_value) *100
+            else:
+                percent = Decimal("100")
             BODY_HTML = BODY_HTML_TEMPLATE.format(
                 name=name,
                 today=date.strftime("%d de %B de %Y"),
