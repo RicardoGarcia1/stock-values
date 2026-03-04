@@ -2,7 +2,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class MarketStackSettings(BaseSettings):
-    base_url: str | None = "http://localhost:8081"
+    base_url: str | None = "http://api.marketstack.com"
     price_eod_endpoint: str | None = "/v2/eod?access_key={access_key}&symbols={symbol}"
     api_key: str | None = "f3715ce587da03a5cfda92f9fa6a40a9"
     model_config = SettingsConfigDict(env_prefix='EXTERNAL_PRICE_API_PROVIDER_')

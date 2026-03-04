@@ -73,6 +73,7 @@ sudo apt install nodejs
 sudo apt install npm
 sudo npm install pm2@latest -g
 
+pm2 start ".venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000" --name stock-options-2
 
 http://35.178.41.121:8000/healtz
 
