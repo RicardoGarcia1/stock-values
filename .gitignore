@@ -6,6 +6,17 @@ _app/_pycache__/
 # C extensions
 *.so
 
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Entornos virtuales
+venv/
+.env
+
+# Otros comunes
+.DS_Store
+
 # Distribution / packaging
 .Python
 build/
