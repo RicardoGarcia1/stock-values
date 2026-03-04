@@ -36,6 +36,7 @@ class SesEmailSender(EmailSenderPort):
             locale.setlocale(locale.LC_TIME, 'es_ES.utf8')
             date = datetime.now()
             current_value = Decimal(total)
+            last_week_value=Decimal("0")
             for history_value in user_history:
                 history_date = datetime.strptime(history_value.day, "%Y-%m-%d")
                 if history_date.day == (date.day - 7):
