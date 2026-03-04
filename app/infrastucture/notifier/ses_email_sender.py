@@ -33,7 +33,7 @@ class SesEmailSender(EmailSenderPort):
             </html>
             """
             print(user_history)
-            locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+            locale.setlocale(locale.LC_TIME, 'es_ES.utf8')
             date = datetime.now()
             current_value = Decimal(total)
             for history_value in user_history:
